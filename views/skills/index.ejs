@@ -12,7 +12,9 @@
     <ul>
       <% skills.forEach(function(t) { %>
         <li>
-          <%= t.skills %>
+          <a href="/skills/<%= t.id %>">
+            <%= t.skill %>
+          </a>
             - 
           <%= t.learned ? 'learned' : 'not learned' %>
         </li>
