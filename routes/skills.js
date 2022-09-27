@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
+//require controller that exports skills CRUD functions
+const skillsCtrl = require ("../controllers/skills");
+
 //All paths start with /skills
 
-/* GET skills listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+//GET /skills
+router.get ("/", skillsCtrl.index)
 
 module.exports = router;
